@@ -6,15 +6,26 @@ use Vendor\Spider\Htmldom;
 
 class BbsController extends Controller
 {
+    /**
+     * 入口
+     */
     public function index()
     {
-        $category=1;
-        $page=1;
-        $url = ['http://bbs.lyrb.com.cn/forum-'.$category.'-' . $page];
+        $category_max=1;
+        $page_max=1;
 
-        $this->getOne($url);
+        for($i=0;$i<$category_max;$i++){
+            for($j=0;$j<$page_max;$j++){
+                $url = ['http://bbs.lyrb.com.cn/forum-'.$i.'-' . $j];
+                $this->getOne($url);
+            }
+        }
     }
 
+    /**
+     * 获取单条数据
+     * @param $url
+     */
     public function getOne($url)
     {
         $html = file_get_contents($url);
@@ -48,13 +59,13 @@ class BbsController extends Controller
             $arr[$key]['date'] = $val;
         }
 
-
+        //doing:写到数据库中
     }
 
 
-    public function rules()
-    {
 
+    public function writeIntoDb(){
 
+        //doing:sheji biao
     }
 }
