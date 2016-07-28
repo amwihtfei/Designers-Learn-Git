@@ -8,11 +8,14 @@ class IndexController extends Controller
 {
     public function index()
     {
-//        $html=file_get_contents('http://liuyangshi.cn/jiaoyu/');
-        $html=file_get_contents('http://www.baidu.com');
-        dump($html);
-
-
+        $url=['http://www.hnz.com.cn/'];
+        foreach($url as $val){
+            $this->getOne($val);
+        }
+    }
+    
+    public function getOne($url){
+        $html=file_get_contents($url);
         $html=new Htmldom($html);
         dump($html->find('#wrapper'));
     }
