@@ -28,34 +28,37 @@ class HumanController extends Controller
         $job_name=$html->find('.jycomv4227 ul li strong a');
         $job_name=$job_name->getPlainText();
 
-        $job_name=$html->find('.jycomv4227 ul li strong a');
-        $job_name=$job_name->getPlainText();
+        $info=$html->find('.jycomv4227 ul li');
 
-        $job_name=$html->find('.jycomv4227 ul li strong a');
-        $job_name=$job_name->getPlainText();
+        for($i=0;$i<count($info);$i++){
+            if($i>0 && $i<=count($info)-2){
+                $temp=$job_name->getPlainText();
+                //doing:汇总到数组中,并写入数据库中
+                if(strstr($temp,'职位类型：')){
 
-        $job_name=$html->find('.jycomv4227 ul li strong a');
-        $job_name=$job_name->getPlainText();
+                }elseif(strstr($temp,'性别要求：')){
 
-        $job_name=$html->find('.jycomv4227 ul li strong a');
-        $job_name=$job_name->getPlainText();
+                }elseif(strstr($temp,'性别要求：')){
 
+                }elseif(strstr($temp,'招聘人数：')){
 
-        $job_name=$html->find('.jycomv4227 ul li strong a');
-        $job_name=$job_name->getPlainText();
+                }elseif(strstr($temp,'薪资待遇：')){
 
+                }elseif(strstr($temp,'工作地区：')){
 
-        $job_name=$html->find('.jycomv4227 ul li strong a');
-        $job_name=$job_name->getPlainText();
+                }elseif(strstr($temp,'学历要求：')){
 
+                }elseif(strstr($temp,'工作经验：')){
 
-        $job_name=$html->find('.jycomv4227 ul li strong a');
-        $job_name=$job_name->getPlainText();
+                }elseif(strstr($temp,'年龄要求：')){
 
+                }elseif(strstr($temp,'发布时间：')){
 
-        $job_name=$html->find('.jycomv4227 ul li strong a');
-        $job_name=$job_name->getPlainText();
+                }elseif(strstr($temp,'截止时间：')){
 
+                }
+            }
+        }
     }
 
 
