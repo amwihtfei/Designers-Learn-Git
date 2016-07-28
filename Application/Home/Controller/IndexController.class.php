@@ -19,4 +19,18 @@ class IndexController extends Controller
         $html=new Htmldom($html);
         dump($html->find('#wrapper'));
     }
+
+
+    public function test(){
+
+    $url='http://www.hnz.com.cn/person/showinfo.aspx?jobid=201607280916330';
+        $html=file_get_contents($url);
+        dump($html);
+    }
+    
+    
+    public function rules(){
+    
+    
+    }
 }
