@@ -9,7 +9,6 @@ class BbsController extends Controller
     public function index()
     {
         $job_id = 67098;
-//        $url = ['http://www.liuyangjob.com/Company_Index.asp?hygjc=&Position_b=&Position_s=&Qualification=&Province=&City=&County=&ValidityDate=&keyword=&page=' . $count];
         $url = ['http://www.liuyangjob.com/job/job.asp?JobId=' . $job_id];
 
         $this->getOne($url);
