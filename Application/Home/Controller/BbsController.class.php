@@ -66,6 +66,6 @@ class BbsController extends Controller
 
     public function writeIntoDb(){
 
-        //doing:sheji biao
+        //doing:sheji biao   table
     }
 }
