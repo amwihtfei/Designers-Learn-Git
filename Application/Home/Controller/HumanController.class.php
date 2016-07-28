@@ -57,6 +57,7 @@ class HumanController extends Controller
                 }elseif(strstr($temp,'截止时间：')){
 
                 }
+                //doing:这里还需要公司地址,联系电话等信息
             }
         }
     }
